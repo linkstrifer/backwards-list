@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/linkstrifer/backwards-list/issues"
   },
-  "homepage": "https://github.com/linkstrifer/backwards-list#readme"
+  "homepage": "https://github.com/linkstrifer/backwards-list#readme",
+  "devDependencies": {}
 }
