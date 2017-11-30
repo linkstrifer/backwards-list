@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select snapshot 1`] = `
+<div>
+  <label
+    htmlFor="input-order"
+    style={
+      Object {
+        "marginRight": "10px",
+      }
+    }
+  >
+    Ordenar:
+  </label>
+  <select
+    id="input-order"
+    onChange={[Function]}
+  >
+    <option
+      defaultValue={true}
+      value="asc"
+    >
+      a...z
+    </option>
+    <option
+      value="des"
+    >
+      z...a
+    </option>
+  </select>
+</div>
+`;

@@ -11,6 +11,24 @@ const initialState = {
 };
 
 class ListComponent extends Component {
+	constructor(props) {
+		super();
+
+		const parser = new DOMParser();
+		const list = parser.parseFromString(props.list, 'text/html');
+		const items = list.querySelectorAll('li');
+
+		this.state = initialState;
+
+		for (let i = 0; i < items.length; i++) {
+			this.state.baseItems.push({
+				label: items[i].innerText
+			});
+		}
+		
+		this.state.items = this.state.baseItems.sort(this.orderAsc);
+	}
+
 	orderHandler = (order) => {
 		this.setState((prevState) => ({
 			items: prevState.items.sort(order === 'asc' ? this.orderAsc : this.orderDes),
@@ -44,24 +62,6 @@ class ListComponent extends Component {
 		}
 
 		return 0;
-	}
-
-	constructor(props) {
-		super();
-
-		const parser = new DOMParser();
-		const list = parser.parseFromString(props.list, 'text/html');
-		const items = list.querySelectorAll('li');
-
-		this.state = initialState;
-
-		for (let i = 0; i < items.length; i++) {
-			this.state.baseItems.push({
-				label: items[i].innerText
-			});
-		}
-		
-		this.state.items = this.state.baseItems.sort(this.orderAsc);
 	}
 
 	render() {
