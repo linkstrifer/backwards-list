@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import ItemComponent from './item.component';
+import SearchComponent from "./search.component";
 
-test('Item snapshot', () => {
+test('Search snapshot', () => {
   const component = renderer.create(
-    <ItemComponent label="test item" />
+    <SearchComponent />
   );
 
   const tree = component.toJSON();
-  
+
   expect(tree).toMatchSnapshot();
-});
+})

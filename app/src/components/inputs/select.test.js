@@ -1,14 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import ItemComponent from './item.component';
+import SelectComponent from './select.component';
 
-test('Item snapshot', () => {
+test('Select snapshot', () => {
   const component = renderer.create(
-    <ItemComponent label="test item" />
+    <SelectComponent />
   );
 
   const tree = component.toJSON();
-  
+
   expect(tree).toMatchSnapshot();
 });
