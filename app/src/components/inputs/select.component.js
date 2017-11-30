@@ -3,7 +3,9 @@ import React from 'react';
 const SelectComponent = (props) => {
   return (
     <div>
-      <label htmlFor="input-order">
+      <label htmlFor="input-order" style={{
+        marginRight: '10px'
+      }}>
         Ordenar:
       </label>
       <select id="input-order" onChange={(event) => {

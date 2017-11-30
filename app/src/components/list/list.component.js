@@ -67,8 +67,13 @@ class ListComponent extends Component {
 	render() {
 		return (
 			<div>
-				<SearchInput handler={this.searchHandler} />
-				<SelectComponent handler={this.orderHandler} />
+				<div style={{
+					display: 'flex',
+					justifyContent: 'space-between'
+				}}>
+					<SearchInput handler={this.searchHandler} />
+					<SelectComponent handler={this.orderHandler} />
+				</div>
 				<ul>
 					{
 						this.state.items.map((item, index) => {
