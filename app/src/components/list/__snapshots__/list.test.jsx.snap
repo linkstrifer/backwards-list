@@ -6,7 +6,7 @@ exports[`List snapshot 1`] = `
     style={
       Object {
         "display": "flex",
-        "justifyContent": "space-between",
+        "justifyContent": "space-around",
       }
     }
   >
