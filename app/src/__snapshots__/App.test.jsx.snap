@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <input
+        onInput={[Function]}
+        placeholder="buscar"
+      />
+      <div>
+        <label
+          htmlFor="input-order"
+          style={
+            Object {
+              "marginRight": "10px",
+            }
+          }
+        >
+          Ordenar:
+        </label>
+        <select
+          id="input-order"
+          onChange={[Function]}
+        >
+          <option
+            defaultValue={true}
+            value="asc"
+          >
+            a...z
+          </option>
+          <option
+            value="des"
+          >
+            z...a
+          </option>
+        </select>
+      </div>
+    </div>
+    <ul>
+      <li>
+        item 1
+      </li>
+      <li>
+        item 10
+      </li>
+      <li>
+        item 2
+      </li>
+      <li>
+        item 3
+      </li>
+      <li>
+        item 4
+      </li>
+      <li>
+        item 5
+      </li>
+      <li>
+        item 6
+      </li>
+      <li>
+        item 7
+      </li>
+      <li>
+        item 8
+      </li>
+      <li>
+        item 9
+      </li>
+    </ul>
+  </div>
+</div>
+`;
