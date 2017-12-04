@@ -5,6 +5,8 @@ import ItemComponent from './item.component';
 import SelectComponent from './../inputs/select.component';
 import SearchInput from './../inputs/search.component';
 
+import { inputRowStyles } from './../../styles/styles';
+
 const initialState = {
   order: 'asc',
   baseItems: [],
@@ -69,11 +71,7 @@ class ListComponent extends Component {
   render() {
     return (
       <div>
-        <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}
-        >
+        <div style={inputRowStyles}>
           <SearchInput handler={this.searchHandler} />
           <SelectComponent handler={this.orderHandler} />
         </div>
