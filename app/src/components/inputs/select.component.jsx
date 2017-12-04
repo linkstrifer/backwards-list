@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { selectStyles } from './../../styles/styles';
+
 const SelectComponent = props => (
   <div>
     <label
       htmlFor="input-order"
-      style={{
-        marginRight: '10px',
-      }}
+      style={selectStyles}
     >
       Ordenar:
     </label>
