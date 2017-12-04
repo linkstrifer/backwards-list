@@ -1,15 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
 
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-Enzyme.configure({ adapter: new Adapter() });
-
 import ListComponent from './list.component';
-import ItemComponent from './item.component';
-import SearchInput from '../inputs/search.component';
+
+
+Enzyme.configure({ adapter: new Adapter() });
 
 const testList = `<ul>
   <li>item 1</li>
@@ -26,11 +24,9 @@ const testList = `<ul>
 `;
 
 test('List snapshot', () => {
-  const component = renderer.create(
-    <ListComponent list={testList} />
-  );
+  const component = renderer.create(<ListComponent list={testList} />);
 
-  let tree = component.toJSON();
-  
+  const tree = component.toJSON();
+
   expect(tree).toMatchSnapshot();
 });
